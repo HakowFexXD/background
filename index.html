@@ -161,8 +161,8 @@ for (let i = 0; i < blocks.length; i++) {
     }
   }
 
-  const tiltFactor = 0.5; // im większa wartość, tym bardziej klocki idą do tyłu
-b.obj.position.z = -1 - (b.obj.position.y - baseHeight / 2) * tiltFactor;
+  // interpolacja, aby ruch był płynny
+  b.obj.position.y += (targetY - b.obj.position.y) * 0.1;
 }
 
       }
